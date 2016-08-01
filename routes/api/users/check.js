@@ -1,4 +1,6 @@
 var express = require('express');
+var pg = require("pg");
+
 var pgClient = require('../../../utils/database_connection');
 var router = express.Router();
 
@@ -33,17 +35,18 @@ function postGISQueryToFeatureCollection(queryResult) {
 router.post('/', function (req, res, next) {
    // console.log(req, res, next);
     var client = pgClient.connect();
-    var query = client.query('SELECT * FROM points as p WHERE ST_DWithin(p.location,Geography(ST_MakePoint(-72.060316, 48.432044)),100)');
-    var geojson = postGISQueryToFeatureCollection(query);
-    
-      query.on('row', function(row) {
+    var query = client.query("SELECT ST_AsGeoJSON(location) FROM points as p WHERE ST_DWithin(p.location,ST_GeomFromText('POINT(-71.060316 48.432044)', 4326),100) = true;");
+      
+      query.on('row', function(row,result) {
         console.log(row);
+        result.addRow(row);
+        
       });
-    query.on('end', function () {
+    query.on('end', function (result) {
    //console.log(arguments);
      client.end();
      res.send(
-       geojson
+          result       
        );
     });
   });

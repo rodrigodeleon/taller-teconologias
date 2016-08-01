@@ -19,7 +19,7 @@
         jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="24.0.1"
-        sha1="2474556e856488b56766b32584be2cc1ffac4ae4">
+        sha1="e2de9296573239889ec3f4214c88253a48681e1b">
         <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_32ce3d2c2a6da71666dc84ff0381a33930187c9a/classes.dex" />
     </item>
     <item
@@ -30,17 +30,10 @@
         <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.0_7b557c291c27dfb65bd239c08e221dfea654d8c7/classes.dex" />
     </item>
     <item
-        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.1"
-        sha1="e096a5d8343cc9c5a9f6eded36bd0f4c82f8c83e">
-        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.1.0_c4df380f3f3bea72f79b459dcdd4ca844899fafd/classes.dex" />
-    </item>
-    <item
         jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="24.0.1"
-        sha1="a0ff6849a65f9813a9d195b4db06e1bea269beee">
+        sha1="9c89ec5b7a2dde4eb9a431be8dfe9d6efd8076b4">
         <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2e35683f18a37bf8dbe1b615f1ff7b3f0e61053b/classes.dex" />
     </item>
     <item
@@ -56,6 +49,13 @@
         revision="24.0.1"
         sha1="b0b08cc0ac897e596abe6b263a9507cba875b705">
         <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-2015.05.28_1f4b5bf1046e98fea9ffde2e0d54606195d17f15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="e096a5d8343cc9c5a9f6eded36bd0f4c82f8c83e">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.1.0_c4df380f3f3bea72f79b459dcdd4ca844899fafd/classes.dex" />
     </item>
     <item
         jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.0/jars/classes.jar"

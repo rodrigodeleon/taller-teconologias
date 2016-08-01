@@ -1,6 +1,10 @@
-SELECT * FROM points as p
+SELECT ST_AsGeoJSON(location) FROM points as p
   WHERE ST_DWithin(
     p.location,
-    Geography(ST_MakePoint(-72.060316, 48.432044)),
+    ST_GeomFromText('POINT(-71.060316 48.432044)', 4326),
     100
-  );
+  ) = true;
+
+  
+
+  
