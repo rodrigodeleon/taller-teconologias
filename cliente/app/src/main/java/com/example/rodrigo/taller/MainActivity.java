@@ -9,9 +9,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,11 +27,45 @@ public class MainActivity extends AppCompatActivity {
 
     public void miJson(View view)
     {
-        final String url = "http://10.0.2.2:3000/api/users/check";
+        final String url = "http://10.0.2.2:3000/api/users/check"; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
 
 
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url, null,
+        JsonArrayRequest getPuntos = new JsonArrayRequest(Request.Method.POST, url, null,
+                new Response.Listener<JSONArray>()
+                {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        // display response
+
+                        for(int i = 0; i < response.length(); i++)
+                            try {
+
+                                //Este bloque me trae las latitudes y longitudes de todos los puntos, aca adentro habria que mandarlos al mapa
+                                JSONObject a = response.getJSONObject(i).getJSONObject("coordinates");
+
+                                String lat = a.getString("lat");
+                                String lng = a.getString("lng");
+                                System.out.println(lat);
+                                System.out.println(lng);
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Error.Response", error.toString());
+                    }
+                }
+        );
+/*
+            este bloque sirve cuando precisas solo un objeto
+            JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url, null,
                 new Response.Listener<JSONObject>()
                 {
                     @Override
@@ -45,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("Error.Response", error.toString());
                     }
                 }
-        );
+        );*/
 
 // add it to the RequestQueue
-        queue.add(getRequest);
+        queue.add(getPuntos);
 
 
     }
