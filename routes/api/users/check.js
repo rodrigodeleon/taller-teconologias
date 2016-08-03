@@ -5,32 +5,30 @@ var pgClient = require('../../../utils/database_connection');
 var router = express.Router();
 
 
-router.post('/', function (req, res, next) {
+router.get('/', function (req, res, next) {
    
     var client = pgClient.connect();
-    var queryString = ("SELECT ST_AsGeoJSON(location) FROM points as p WHERE ST_DWithin(p.location,ST_GeomFromText('POINT(-71.060316 48.432044)', 4326),100) = true;");
-    var query = client.query(queryString , [req.query.lng, req.query.lat]);
-      
-      
+    var queryString = 'SELECT id, description, ST_AsGeoJSON(location) AS location ' +
+    'FROM points  as p WHERE ST_DWithin(p.location, ' +
+    'Geography(ST_MakePoint($1, $2)), ' +
+    '100);';
+    var query = client.query(queryString, [req.query.lat, req.query.lng]);
 
-
-    query.on('row', function(row,result)
+     query.on('row', function(row,result)
      {
         console.log(row);
         var point = row;
-        point.location = JSON.parse(point['st_asgeojson']);
+        point.location = JSON.parse(point['location']);
         var a = 
         {
-             "coordinates": {
+             "coordenadas": {
+                 descripcion : point.description,
                  lat: point.location.coordinates[0],
                  lng: point.location.coordinates[1] 
                       }
         }
+        result.addRow(a);
 
-        
-        result.addRow(a );
-        
-        
       });
     query.on('end', function (result) 
     {
@@ -38,11 +36,8 @@ router.post('/', function (req, res, next) {
      res.send(
           result.rows       
        );
-    });
+    });  
   });
-
-
-
 
 module.exports = router;
 

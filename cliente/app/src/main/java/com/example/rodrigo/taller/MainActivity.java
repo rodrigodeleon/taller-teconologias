@@ -27,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void miJson(View view)
     {
-        final String url = "http://10.0.2.2:3000/api/users/check"; // aca tenemos que pasar los parametros de donde estamos parados
+        double lat = -71.060316;
+        double lng = 48.432044;
+        final String url = "http://10.0.2.2:3000/api/users/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
 
 
-        JsonArrayRequest getPuntos = new JsonArrayRequest(Request.Method.POST, url, null,
+        JsonArrayRequest getPuntos = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>()
                 {
                     @Override
@@ -42,10 +44,11 @@ public class MainActivity extends AppCompatActivity {
                             try {
 
                                 //Este bloque me trae las latitudes y longitudes de todos los puntos, aca adentro habria que mandarlos al mapa
-                                JSONObject a = response.getJSONObject(i).getJSONObject("coordinates");
-
+                                JSONObject a = response.getJSONObject(i).getJSONObject("coordenadas");
+                                String desc = a.getString("descripcion");
                                 String lat = a.getString("lat");
                                 String lng = a.getString("lng");
+                                System.out.println(desc);
                                 System.out.println(lat);
                                 System.out.println(lng);
 
@@ -82,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );*/
-
-// add it to the RequestQueue
+        // add it to the RequestQueue
         queue.add(getPuntos);
 
 
