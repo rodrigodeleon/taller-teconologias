@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void miJson(View view)
     {
-        double lat = -71.060316;
-        double lng = 48.432044;
+        double lat = -34.9055189;
+        double lng = -54.956316;
         final String url = "http://10.0.2.2:3000/api/users/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
 
