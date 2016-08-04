@@ -1,4 +1,5 @@
 package com.example.rodrigo.taller;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -62,13 +64,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         LatLng coordenadas = new LatLng(lat,lng);
-        CameraUpdate miUbicacion = CameraUpdateFactory.newLatLngZoom(coordenadas, 16);
         mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Estoy aqui"));
-        mMap.animateCamera(miUbicacion);;
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(coordenadas));
+
         cargarCercanos();
+
+        CameraPosition position = this.mMap.getCameraPosition();
+        CameraPosition.Builder builder = new CameraPosition.Builder();
+        builder.zoom(17);
+        builder.target(coordenadas);
+
+        this.mMap.animateCamera(CameraUpdateFactory.newCameraPosition(builder.build()));
 
 
     }

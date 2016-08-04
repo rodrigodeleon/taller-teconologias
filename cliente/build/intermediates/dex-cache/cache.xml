@@ -1,2 +1,432 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_17bcf914fa70d3c0c73748924734ccb6c0b5fab6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.4.0_92328e9423729500b976421a22ba4ffe3e960a2a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.4.0_f7354bda3e49d46d88e034b077e24a6ec5ac87ba/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.4.0_c2d3876a13c20dcbf6a840aeaa0eda695b137501/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.4.0_2f0a6fa87d6d1ede9bdd65e24b096249250b715a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.4.0_a186031f0e080b8067072fe5cfe691c6f6c43ee9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.4.0_9563d4d097408c1adf6f854958c0d743bd7746a7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.4.0_f795424eb9af7dc26c310ae5643c2dbe740a63b9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-contextmanager-9.4.0_d06517da467243ffc1fe0d53f8552957a569085a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="b67500d09cd494e24d4acb17e99bd0dbc84755e0">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_32ce3d2c2a6da71666dc84ff0381a33930187c9a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.4.0_e2c6f13cd25e3de892dedae0697633a54089bbe4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.1.1/3af19f153122737b372622fa6c81dd11a1c6b999/support-annotations-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.1_7cb7923bc96ee2fc69b12bfd40facd09743ea2bc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.4.0_35e48476b7b3f8f6566bda719af4fbd090bfe482/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/.gradle/caches/modules-2/files-2.1/eu.the4thfloor.volley/com.android.volley/2015.05.28/b0b08cc0ac897e596abe6b263a9507cba875b705/com.android.volley-2015.05.28.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="b0b08cc0ac897e596abe6b263a9507cba875b705">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-2015.05.28_1f4b5bf1046e98fea9ffde2e0d54606195d17f15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_03d1b6b6ae9b35c16969245b896174dff4b7f0fe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.4.0_278a711633359fb35810924d44005a98242e43fa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.4.0_accde01e2ff13a95310d6ce55dd2363171951887/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.4.0_efec11bc7e4f112709256c7eb211f23f8dd98dcd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.4.0_dd22dcc91d4dd6b570c7b2112dced4b1e7d7eee1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.4.0_08ac30d691f25c7e94bf9777164ed7bdfb600315/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.4.0_4d55faaaa2e78c95cb6c6da3cc98d15b866c76be/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.4.0_072816ceab6cfa5a4563a01d980cc27df34e8308/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.4.0_2dfd5f1660de982d9da3eb1710e133a0b8ee249a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.4.0_003e19feb242b6c505aaaa69bc2e31d4e147f11d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.4.0_41bb438c91ad6a1bb0292ae8644a1d21cad740e9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.4.0_b2dea36c185ac218f5d9d8365a8bbf3c85d7a71e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.4.0_b683915f9bb60b0a90a26bec9df98fb5943f7fc0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_b816f01ccd4de65b61e5f5bd81db576f6f7eeb99/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.4.0_fe1c2e65f60386f26a4299a8e46138dae2871bee/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.4.0_0e7e63479e1ecfd119776c8a43ac74f720577374/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.4.0_5e4af27ed684572cb8653293d05bc48663b389d1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.4.0_6a3d8ca6d8ddbbafc71eb33490060302834faddc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.androidmapsextensions/android-maps-extensions/2.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="234a5dfd41dd64614f6395134fa56cd90f26e2a0">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.androidmapsextensions-android-maps-extensions-2.2.1_4ff14db1a013837213551a36f588678bf36d7db0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.4.0_99a720fdc4ded4ae9066e3416c9c9c9de279c2b3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.4.0_de03fd2ab9103108304d484d678599c5f9b7d43c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.1.1_6942daf7e0838e5b2b07d65819676b03b5abba6c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.4.0_e09398cdafe4c4be7b315db7ad5967362b7fa44b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.4.0_8df9389c8fb294afb492c4316929149bd2b4a7f1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="93cb56c51da6a249ad924a4bd8fa87d8cbfbf659">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2e35683f18a37bf8dbe1b615f1ff7b3f0e61053b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.4.0_69133412c882bb577ea6502b8a3acf513cd93410/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.4.0_671dc2db8502af4511fd1417fd887244bd885e4b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.4.0_e6d5211d1d9fcd29885b6b450910dfcf70c99119/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.4.0_8ab186de5a19488cee9bc3a936883b5476b8c5eb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.4.0_5aea09bcc5fd4cae5c9ba536493cfa5893f9b3d6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.1.1_456bc90f88c8d9d04b3b717c78307e49eae11e66/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.4.0_c535df9503047d6b3e3ae37077519c484b288183/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.4.0_01c673cfd98005374ea71bc55c626204d148fb47/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.4.0_c90853fcb89514eda38cf5318694b9651657610b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.4.0_a0b3bb2eacc199781f5b8b299a7a559bff78ecc9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.4.0_6e3288cf0575f0ad2fe103b403502fc0ae150b85/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.4.0_bed1b9c1a4dbf25ce41f905ab2bde1cdc34edb97/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.4.0_4697ef6f4e70021bb815e4601b1fc0fb44958c27/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.4.0_a7c955be6a0de7391237ba296ed39a59d0b26c4f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.4.0_c56cd305423bf68cbfa007b23edb817b51a68eff/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.4.0_965760e21ee9a1f7435747315ae92c40f12db4fc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_731f004dc319e8f402bd0ebcb6afdea8ad51e8b7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.4.0_12efd6d2c2830690e70be629dbfd0510f66cafdd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.4.0_bfa4545c53f9fc18356e4358a374233898fb8bb7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_3c93c73d168e6168f1e1669d3b3f1647f19c6ffa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.4.0_d20cc865bc3d72f772cf03fbd8ab4e111a930fc7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="/Users/Rodrigo/Desktop/taller-teconologias/cliente/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_6332726b2938e7347b8e0a2472252e4f235aea70/classes.dex" />
+    </item>
+
+</items>
