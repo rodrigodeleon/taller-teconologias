@@ -1,9 +1,13 @@
 package com.example.rodrigo.taller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,6 +26,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final Button boton=(Button) findViewById(R.id.btnIngresar);
+        boton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String usuario=((EditText)findViewById(R.id.txtUsuario)).getText().toString();
+
+                if(usuario.equals("admin"))
+                {
+                    Intent nuevoform=new Intent(MainActivity.this, MapsActivity.class);
+                    startActivity(nuevoform);
+                }
+                else
+                {
+                    Toast.makeText(boton.getContext(),"Usuario Incorrecto",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 

@@ -10,13 +10,44 @@
     tools:context="com.example.rodrigo.taller.MainActivity">
 
     <TextView
+        android:layout_width="258dp"
+        android:layout_height="53dp"
+        android:text="Bienvenido"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal|top"
+        android:textSize="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        android:id="@+id/textView2"
+        android:layout_gravity="left|top"
+        android:textSize="45dp"
+        android:layout_marginTop="94dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/txtUsuario"
+        android:layout_alignParentStart="true"
+        android:textSize="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true" />
+
     <Button
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="dale Json"
-        android:onClick="miJson" />
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:id="@+id/btnIngresar"
+        android:layout_below="@+id/txtUsuario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:textSize="40dp" />
 
 </RelativeLayout>
