@@ -1,0 +1,1 @@
+localhost:3000/api/points/getPuntos?lat=-34.9055189&lng=-54.956316

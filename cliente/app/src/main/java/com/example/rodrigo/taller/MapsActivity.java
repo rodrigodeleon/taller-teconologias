@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -39,7 +40,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker Points;
     double lat = -34.9055186;
     double lng = -54.956311;
-
+    private Marker ultimoMarker;
 
 
     @Override
@@ -55,8 +56,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+
+                System.out.println("hiciste click gil");
+                ultimoMarker = marker;
+                return false;
+            }
+        });
+
 
         cargarPuntos(lat,lng);
+
     }
     //Funcion para mapear puntos
 
@@ -84,7 +96,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     {
         double lat = -34.9055189; //mandamos los parametros a manopla
         double lng = -54.956316;
-        final String url = "http://10.0.2.2:3000/api/users/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
+        final String url = "http://10.0.2.2:3000/api/points/getPuntos?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
 
 
@@ -104,13 +116,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 double latAux = a.getDouble("lat");
                                 double lngAux = a.getDouble("lng");
                                 LatLng coordenadas = new LatLng(latAux,lngAux);
-                                mMap.addMarker(new MarkerOptions()
+
+                                Marker miMarcador = mMap.addMarker(new MarkerOptions()
                                         .position(coordenadas)
                                         .title(desc));
+
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+
 
                     }
                 },
@@ -122,6 +137,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 }
         );
+
+
+
 /*
             este bloque sirve cuando precisas solo un objeto
             JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url, null,
@@ -147,8 +165,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    public void  checkPunto(View view)
+    {
+        double lat = ultimoMarker.getPosition().latitude; //mandamos los parametros a manopla
+        double lng = ultimoMarker.getPosition().longitude;
+        final String url = "http://10.0.2.2:3000/api/points/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
+        RequestQueue queue = Volley.newRequestQueue(this);
 
 
+        JsonArrayRequest checkPunto = new JsonArrayRequest(Request.Method.POST, url, null,
+
+
+                new Response.Listener<JSONArray>()
+                {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        // display response
+
+
+
+
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Error.Response", error.toString());
+                    }
+                }
+        );
+        queue.add(checkPunto);
+
+
+    }
 
     // lo que sigue es el codigo de franco, habria que checkear que nos sirve
 
