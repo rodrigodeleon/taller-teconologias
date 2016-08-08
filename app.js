@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var apigetUsers = require('./routes/api/users/getUsuario');
 var apiPointsCheck = require('./routes/api/points/check');
 var apiPointsGetPuntos = require('./routes/api/points/getPuntos');
 var usersCheckAPI = require('./routes/api/users/check');
@@ -31,6 +32,7 @@ app.use('/users', users);
 app.use('/api/users/check', usersCheckAPI);
 app.use('/api/points/check', apiPointsCheck);
 app.use('/api/points/getPuntos', apiPointsGetPuntos);
+app.use('/api/users/getUsuario',apigetUsers)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) { //eslint-disable-line no-unused-vars

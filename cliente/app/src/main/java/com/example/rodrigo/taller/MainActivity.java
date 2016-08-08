@@ -18,7 +18,7 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 String usuario=((EditText)findViewById(R.id.txtUsuario)).getText().toString();
-
-                if(usuario.equals("admin"))
+                Usuario logueado = loginUser(usuario);
+                if(logueado.getNombre()!=null)
                 {
-                    Intent nuevoform=new Intent(MainActivity.this, MapsActivity.class);
+                    Intent nuevoform = new Intent(MainActivity.this, MapsActivity.class);
                     startActivity(nuevoform);
                 }
                 else
@@ -47,69 +47,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void miJson(View view)
-    {
-        double lat = -34.9055189;
-        double lng = -54.956316;
-        final String url = "http://10.0.2.2:3000/api/users/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
+    public Usuario loginUser(String usuario) {
+
+
+        final String url = "http://10.0.2.2:3000/api/users/getUsuario?nombre=" + usuario; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
+        final Usuario miUser = new Usuario();
 
-
-        JsonArrayRequest getPuntos = new JsonArrayRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONArray>()
-                {
+        JsonArrayRequest getUsuario = new JsonArrayRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         // display response
 
-                        for(int i = 0; i < response.length(); i++)
-                            try {
+                        try {
 
-                                //Este bloque me trae las latitudes y longitudes de todos los puntos, aca adentro habria que mandarlos al mapa
-                                JSONObject a = response.getJSONObject(i).getJSONObject("coordenadas");
-                                String desc = a.getString("descripcion");
-                                String lat = a.getString("lat");
-                                String lng = a.getString("lng");
-                                System.out.println(desc);
-                                System.out.println(lat);
-                                System.out.println(lng);
+                            //intentar que esta mierda asincrona se ejecute antes del return
+                            System.out.println(response);
+                            miUser.setId(response.getJSONObject(0).getJSONObject("usuario").getInt("id"));
+                            miUser.setNombre(response.getJSONObject(0).getJSONObject("usuario").getString("nombre"));
 
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
 
                     }
                 },
-                new Response.ErrorListener()
-                {
+                new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", error.toString());
                     }
                 }
+
+
         );
-/*
-            este bloque sirve cuando precisas solo un objeto
-            JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url, null,
-                new Response.Listener<JSONObject>()
-                {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        // display response
-                        Log.d("Response", response.toString());
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", error.toString());
-                    }
-                }
-        );*/
-        // add it to the RequestQueue
-        queue.add(getPuntos);
+        queue.add(getUsuario);
+
+
+        return  miUser;
 
 
     }
+
 }
