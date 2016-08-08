@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/api/users/check', usersCheckAPI);
-
+app.use('/api/points/check', apiPointsCheck);
 app.use('/api/points/getPuntos', apiPointsGetPuntos);
 
 // catch 404 and forward to error handler

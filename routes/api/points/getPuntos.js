@@ -22,6 +22,7 @@ router.get('/', function (req, res, next) {
         var a = 
         {
              "coordenadas": {
+                 id: point.id,
                  descripcion : point.description,
                  lat: point.location.coordinates[0],
                  lng: point.location.coordinates[1] 

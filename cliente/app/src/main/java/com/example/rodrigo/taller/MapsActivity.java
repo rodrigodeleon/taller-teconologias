@@ -116,13 +116,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 //Este bloque me trae las latitudes y longitudes de todos los puntos, aca adentro habria que mandarlos al mapa
                                 JSONObject a = response.getJSONObject(i).getJSONObject("coordenadas");
                                 String desc = a.getString("descripcion");
+                                String id = a.getString("id");
                                 double latAux = a.getDouble("lat");
                                 double lngAux = a.getDouble("lng");
                                 LatLng coordenadas = new LatLng(latAux,lngAux);
 
                                 Marker miMarcador = mMap.addMarker(new MarkerOptions()
                                         .position(coordenadas)
-                                        .title(desc));
+                                        .title(desc).snippet(id));
 
 
                             } catch (JSONException e) {
@@ -170,9 +171,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void  checkPunto(View view)
     {
-        double lat = ultimoMarker.getPosition().latitude; //mandamos los parametros a manopla
-        double lng = ultimoMarker.getPosition().longitude;
-        final String url = "http://10.0.2.2:3000/api/points/check?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
+        String idPunto= ultimoMarker.getSnippet();//mandamos los parametros a manopla
+        String idUsuario = "1"; //pasar id de usuario logueado
+        final String url = "http://10.0.2.2:3000/api/points/check?idUsuario="+idUsuario+"&idPunto="+idPunto; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
 
 
