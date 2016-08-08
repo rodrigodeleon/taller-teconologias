@@ -22,6 +22,9 @@ import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
 
+    Usuario miUser = new Usuario();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 String usuario=((EditText)findViewById(R.id.txtUsuario)).getText().toString();
-                Usuario logueado = loginUser(usuario);
-                if(logueado.getNombre()!=null)
+                loginUser(miUser ,usuario); // pongan un punto para debuggear aca
+                if(miUser.getNombre()!=null)
                 {
                     Intent nuevoform = new Intent(MainActivity.this, MapsActivity.class);
                     startActivity(nuevoform);
@@ -45,14 +48,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void loginUser(final Usuario aux, String usuario) {
 
-
-    public Usuario loginUser(String usuario) {
-
-
-        final String url = "http://10.0.2.2:3000/api/users/getUsuario?nombre=" + usuario; // aca tenemos que pasar los parametros de donde estamos parados
+        final String url = "http://10.0.2.2:3000/api/users/getUsuario?nombre=" + usuario; 
         RequestQueue queue = Volley.newRequestQueue(this);
-        final Usuario miUser = new Usuario();
 
         JsonArrayRequest getUsuario = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -64,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
                             //intentar que esta mierda asincrona se ejecute antes del return
                             System.out.println(response);
-                            miUser.setId(response.getJSONObject(0).getJSONObject("usuario").getInt("id"));
-                            miUser.setNombre(response.getJSONObject(0).getJSONObject("usuario").getString("nombre"));
+                            aux.setId(response.getJSONObject(0).getJSONObject("usuario").getInt("id"));
+                            aux.setNombre(response.getJSONObject(0).getJSONObject("usuario").getString("nombre"));
 
 
                         } catch (JSONException e) {
@@ -82,13 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-
         );
         queue.add(getUsuario);
-
-
-        return  miUser;
-
 
     }
 
