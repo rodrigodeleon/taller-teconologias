@@ -23,34 +23,28 @@ import org.json.JSONException;
 public class MainActivity extends AppCompatActivity {
 
     Usuario miUser = new Usuario();
+    Button boton;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        boton=(Button) findViewById(R.id.btnIngresar);
 
-        final Button boton=(Button) findViewById(R.id.btnIngresar);
         boton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 String usuario=((EditText)findViewById(R.id.txtUsuario)).getText().toString();
                 loginUser(miUser ,usuario); // pongan un punto para debuggear aca
-                if(miUser.getNombre()!=null)
-                {
-                    Intent nuevoform = new Intent(MainActivity.this, MapsActivity.class);
-                    startActivity(nuevoform);
-                }
-                else
-                {
-                    Toast.makeText(boton.getContext(),"Usuario Incorrecto",Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
     }
     public void loginUser(final Usuario aux, String usuario) {
 
-        final String url = "http://10.0.2.2:3000/api/users/getUsuario?nombre=" + usuario; 
+        final String url = "http://10.0.2.2:3000/api/users/getUsuario?nombre=" + usuario;
         RequestQueue queue = Volley.newRequestQueue(this);
 
         JsonArrayRequest getUsuario = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -66,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
                             aux.setId(response.getJSONObject(0).getJSONObject("usuario").getInt("id"));
                             aux.setNombre(response.getJSONObject(0).getJSONObject("usuario").getString("nombre"));
 
+                            if(miUser.getNombre()!=null)
+                            {
+                                Intent nuevoform = new Intent(MainActivity.this, MapsActivity.class);
+                                startActivity(nuevoform);
+                            }
+                            else
+                            {
+                                Toast.makeText(boton.getContext(),"Usuario Incorrecto",Toast.LENGTH_SHORT).show();
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
