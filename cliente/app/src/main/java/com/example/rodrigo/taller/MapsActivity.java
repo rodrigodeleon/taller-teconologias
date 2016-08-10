@@ -2,6 +2,7 @@ package com.example.rodrigo.taller;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -11,12 +12,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -41,6 +44,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     double lat = -34.9055186;
     double lng = -54.956311;
     private Marker ultimoMarker;
+    private Usuario miUser;
+    Button btncheck;
+
 
 
 
@@ -53,6 +59,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        Intent intento = getIntent();
+        miUser = (Usuario) intento.getSerializableExtra("usuario");
+        btncheck =(Button) findViewById(R.id.checkbtn);
+        btncheck.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                checkPunto(view);
+
+
+
+            }
+        });
 
 
     }
@@ -65,10 +84,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 System.out.println("hiciste click gil");
                 ultimoMarker = marker;
+
                 return false;
             }
         });
-
 
         cargarPuntos(lat,lng);
 
@@ -99,9 +118,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     {
         double lat = -34.9055189; //mandamos los parametros a manopla
         double lng = -54.956316;
-        final String url = "http://10.0.2.2:3000/api/points/getPuntos?lat="+lat+"&lng="+lng; // aca tenemos que pasar los parametros de donde estamos parados
+        final String url = "http://10.0.2.2:3000/api/points/getPuntos?lat="+lat+"&lng="+lng+"&usr="+miUser.getId(); // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
-
 
         JsonArrayRequest getPuntos = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>()
@@ -172,26 +190,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void  checkPunto(View view)
     {
         String idPunto= ultimoMarker.getSnippet();//mandamos los parametros a manopla
-        String idUsuario = "1"; //pasar id de usuario logueado
-        final String url = "http://10.0.2.2:3000/api/points/check?idUsuario="+idUsuario+"&idPunto="+idPunto; // aca tenemos que pasar los parametros de donde estamos parados
+        final String url = "http://10.0.2.2:3000/api/points/check?idUsuario="+miUser.getId()+"&idPunto="+idPunto; // aca tenemos que pasar los parametros de donde estamos parados
         RequestQueue queue = Volley.newRequestQueue(this);
+        mMap.clear();
+
+        StringRequest checkPunto = new StringRequest(Request.Method.POST, url,
 
 
-        JsonArrayRequest checkPunto = new JsonArrayRequest(Request.Method.POST, url, null,
-
-
-                new Response.Listener<JSONArray>()
+                new Response.Listener<String>()
                 {
                     @Override
-                    public void onResponse(JSONArray response) {
+                    public void onResponse(String response) {
 
-                                
-
-                        // display response
-
-
-
-
+                        cargarPuntos(lat,lng);
                     }
                 },
                 new Response.ErrorListener()

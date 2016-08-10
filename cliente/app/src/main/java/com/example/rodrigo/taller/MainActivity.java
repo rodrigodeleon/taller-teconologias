@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                             if(miUser.getNombre()!=null)
                             {
                                 Intent nuevoform = new Intent(MainActivity.this, MapsActivity.class);
+                                nuevoform.putExtra("usuario",miUser);
                                 startActivity(nuevoform);
                             }
                             else

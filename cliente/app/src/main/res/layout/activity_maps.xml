@@ -18,9 +18,9 @@ android:layout_height="fill_parent">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Check"
-    android:id="@+id/button"
+    android:id="@+id/checkbtn"
     android:layout_gravity="right|bottom"
-    android:onClick="checkPunto"/>
+    />
 
 
 </FrameLayout>
