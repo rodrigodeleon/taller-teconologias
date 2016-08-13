@@ -2,6 +2,11 @@ localhost:3000/api/points/getPuntos?lat=-34.9055189&lng=-54.956316  con esto pru
 
 localhost:3000/api/points/check?idUsuario=1&idPunto=4 con esto prueban hacer checks
 
+query para scoreboard
+select Id, nombre, count(IdPunto)  from checks inner join usuarios on usuarios.Id = checks.IdUsuario group by usuarios.id order by count(IdPunto) desc
+
+
+
 CREATE TABLE public.checks
 (
   idusuario integer NOT NULL,

@@ -10,7 +10,7 @@ var users = require('./routes/users');
 var apigetUsers = require('./routes/api/users/getUsuario');
 var apiPointsCheck = require('./routes/api/points/check');
 var apiPointsGetPuntos = require('./routes/api/points/getPuntos');
-var usersCheckAPI = require('./routes/api/users/check');
+var usersScores= require('./routes/api/users/scores');
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/api/users/check', usersCheckAPI);
+app.use('/api/users/scores', usersScores);
 app.use('/api/points/check', apiPointsCheck);
 app.use('/api/points/getPuntos', apiPointsGetPuntos);
 app.use('/api/users/getUsuario',apigetUsers)
