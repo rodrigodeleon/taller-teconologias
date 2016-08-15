@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -12,7 +13,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -40,12 +45,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private Marker Marcador;
-    private Marker Points;
     double lat = -34.9055186;
     double lng = -54.956311;
     private Marker ultimoMarker;
     private Usuario miUser;
     Button btncheck;
+
 
 
 
@@ -68,10 +73,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 checkPunto(view);
 
-
-
             }
         });
+
 
 
     }
@@ -82,7 +86,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public boolean onMarkerClick(Marker marker) {
 
-                System.out.println("hiciste click gil");
+
                 ultimoMarker = marker;
 
                 return false;
@@ -90,10 +94,84 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         cargarPuntos(lat,lng);
+        cargarScores();
 
     }
     //Funcion para mapear puntos
 
+    public  void cargarScores()
+    {
+        final String url = "http://10.0.2.2:3000/api/users/scores"; // aca tenemos que pasar los parametros de donde estamos parados
+        RequestQueue queue = Volley.newRequestQueue(this);
+        final TableLayout scores = (TableLayout) findViewById(R.id.scores);
+        JsonArrayRequest getScores = new JsonArrayRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONArray>()
+                {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        // display response
+
+                        /*scores.removeAllViewsInLayout();
+                        TableRow aux = (TableRow)findViewById(R.id.cabecera);
+                        scores.addView(aux);*/
+
+                        while (scores.getChildCount() > 1){
+                            scores.removeView(scores.getChildAt(scores.getChildCount() - 1));
+                        }
+
+                        for(int i = 0; i < response.length(); i++)
+                            try {
+
+                                JSONObject a = response.getJSONObject(i);
+
+                                String id = a.getString("id");
+                                String nombre = a.getString("nombre");
+                                String puntos = a.getString("count");
+
+                                TableRow fila = new TableRow(scores.getContext());
+                                fila.setBackgroundColor(Color.parseColor("#ECEFF1"));
+
+                                TextView mitextview = (TextView) findViewById(R.id.idtextview);
+                                ViewGroup.LayoutParams params = mitextview.getLayoutParams();
+                                params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                                params.width = ViewGroup.LayoutParams.WRAP_CONTENT;
+
+                                TextView idView = new TextView(mitextview.getContext());
+                                idView.setLayoutParams(params);
+                                TextView nombreView = new TextView(mitextview.getContext());
+                                nombreView.setLayoutParams(params);
+                                TextView puntosView = new TextView(mitextview.getContext());
+                                puntosView.setLayoutParams(params);
+
+                                idView.setText(id);
+                                nombreView.setText(nombre);
+                                puntosView.setText(puntos);
+
+                                fila.addView(idView);
+                                fila.addView(nombreView);
+                                fila.addView(puntosView);
+                                scores.addView(fila);
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Error.Response", error.toString());
+                    }
+                }
+        );
+
+        queue.add(getScores);
+
+
+    }
     public void cargarPuntos(double lat, double lng){
 
 
@@ -160,31 +238,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
         );
 
-
-
-/*
-            este bloque sirve cuando precisas solo un objeto
-            JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, url, null,
-                new Response.Listener<JSONObject>()
-                {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        // display response
-                        Log.d("Response", response.toString());
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", error.toString());
-                    }
-                }
-        );*/
-        // add it to the RequestQueue
         queue.add(getPuntos);
-
-
     }
 
     public void  checkPunto(View view)
@@ -203,6 +257,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onResponse(String response) {
 
                         cargarPuntos(lat,lng);
+                        cargarScores();
                     }
                 },
                 new Response.ErrorListener()
@@ -218,7 +273,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    // lo que sigue es el codigo de franco, habria que checkear que nos sirve
+    // codigo de franco para gps
 
     private void AgregarMarcador(double lat, double lng) {
         LatLng coordenadas = new LatLng(lat, lng);

@@ -22,5 +22,34 @@ android:layout_height="fill_parent">
     android:layout_gravity="right|bottom"
     />
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|bottom"
+        android:id="@+id/scores">
+        <TableRow
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:id="@+id/cabecera"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Id Usuario"
+                android:id="@+id/idtextview"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Puntos" />
+        </TableRow>
+    </TableLayout>
+
 
 </FrameLayout>
