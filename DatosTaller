@@ -1,0 +1,270 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.3
+-- Dumped by pg_dump version 9.5.3
+
+-- Started on 2016-08-16 19:56:27 UYT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 12623)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 3723 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- TOC entry 2 (class 3079 OID 19154)
+-- Name: fuzzystrmatch; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS fuzzystrmatch WITH SCHEMA public;
+
+
+--
+-- TOC entry 3724 (class 0 OID 0)
+-- Dependencies: 2
+-- Name: EXTENSION fuzzystrmatch; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION fuzzystrmatch IS 'determine similarities and distance between strings';
+
+
+--
+-- TOC entry 3 (class 3079 OID 17788)
+-- Name: postgis; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
+
+
+--
+-- TOC entry 3725 (class 0 OID 0)
+-- Dependencies: 3
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 201 (class 1259 OID 32786)
+-- Name: checks; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE checks (
+    idusuario integer NOT NULL,
+    idpunto integer NOT NULL
+);
+
+
+ALTER TABLE checks OWNER TO postgres;
+
+--
+-- TOC entry 199 (class 1259 OID 19165)
+-- Name: points; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE points (
+    id integer NOT NULL,
+    description character varying(255) NOT NULL,
+    location geography(Point,4326)
+);
+
+
+ALTER TABLE points OWNER TO postgres;
+
+--
+-- TOC entry 183 (class 1259 OID 17778)
+-- Name: prueba; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE prueba (
+    id smallint NOT NULL
+);
+
+
+ALTER TABLE prueba OWNER TO postgres;
+
+--
+-- TOC entry 200 (class 1259 OID 24594)
+-- Name: usuarios; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE usuarios (
+    id integer NOT NULL,
+    nombre character varying(255) NOT NULL
+);
+
+
+ALTER TABLE usuarios OWNER TO postgres;
+
+--
+-- TOC entry 3715 (class 0 OID 32786)
+-- Dependencies: 201
+-- Data for Name: checks; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY checks (idusuario, idpunto) FROM stdin;
+1	10
+1	5
+2	2
+2	3
+2	5
+2	9
+\.
+
+
+--
+-- TOC entry 3713 (class 0 OID 19165)
+-- Dependencies: 199
+-- Data for Name: points; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY points (id, description, location) FROM stdin;
+1	primero	0101000020E610000077B4160BE87341C01E520C90687A4BC0
+2	segundo	0101000020E610000066773705E87341C094EFBECF5D7A4BC0
+3	tercero	0101000020E6100000AF35A506E47341C0E4D7B4F74E7A4BC0
+4	cuarto	0101000020E6100000418AF0E5F47341C00C42D4D8B97A4BC0
+5	quinto	0101000020E61000007DB90501E87341C0B6F86FB9557A4BC0
+6	sexto	0101000020E61000001EDFDE35E87341C0E7C589AF767A4BC0
+7	septimo	0101000020E610000014CD0358E47341C0D105F52D737A4BC0
+8	octavo	0101000020E6100000758E01D9EB7341C0D105F52D737A4BC0
+9	noveno	0101000020E610000028B7ED7BD47341C0DDB3AED1727A4BC0
+10	decimo	0101000020E6100000137CD3F4D97341C0C24D4695617A4BC0
+\.
+
+
+--
+-- TOC entry 3712 (class 0 OID 17778)
+-- Dependencies: 183
+-- Data for Name: prueba; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY prueba (id) FROM stdin;
+1
+2
+3
+\.
+
+
+--
+-- TOC entry 3580 (class 0 OID 18078)
+-- Dependencies: 185
+-- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY spatial_ref_sys  FROM stdin;
+\.
+
+
+--
+-- TOC entry 3714 (class 0 OID 24594)
+-- Dependencies: 200
+-- Data for Name: usuarios; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY usuarios (id, nombre) FROM stdin;
+1	rodrigo
+2	franco
+3	mauricio
+\.
+
+
+--
+-- TOC entry 3588 (class 2606 OID 32790)
+-- Name: checkusuario_primary_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY checks
+    ADD CONSTRAINT checkusuario_primary_key PRIMARY KEY (idusuario, idpunto);
+
+
+--
+-- TOC entry 3582 (class 2606 OID 17787)
+-- Name: clave; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY prueba
+    ADD CONSTRAINT clave PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3584 (class 2606 OID 19172)
+-- Name: points_primary_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY points
+    ADD CONSTRAINT points_primary_key PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3586 (class 2606 OID 24598)
+-- Name: usuario_primary_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuarios
+    ADD CONSTRAINT usuario_primary_key PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3589 (class 2606 OID 32791)
+-- Name: checks_idpunto_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY checks
+    ADD CONSTRAINT checks_idpunto_fkey FOREIGN KEY (idpunto) REFERENCES points(id);
+
+
+--
+-- TOC entry 3590 (class 2606 OID 32796)
+-- Name: checks_idusuario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY checks
+    ADD CONSTRAINT checks_idusuario_fkey FOREIGN KEY (idusuario) REFERENCES usuarios(id);
+
+
+--
+-- TOC entry 3722 (class 0 OID 0)
+-- Dependencies: 8
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2016-08-16 19:56:28 UYT
+
+--
+-- PostgreSQL database dump complete
+--
+
