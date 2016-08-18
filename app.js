@@ -11,6 +11,7 @@ var apigetUsers = require('./routes/api/users/getUsuario');
 var apiPointsCheck = require('./routes/api/points/check');
 var apiPointsGetPuntos = require('./routes/api/points/getPuntos');
 var usersScores= require('./routes/api/users/scores');
+var prueba = require('./prueba');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/prueba', prueba);
 app.use('/', routes);
 app.use('/users', users);
 app.use('/api/users/scores', usersScores);
